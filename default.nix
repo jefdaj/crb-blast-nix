@@ -7,7 +7,7 @@
 let
   # TODO clean this up: upload the blast-nix package and load it with niv
   # TODO and include the v2.2.29 code here instead? this is the only repo that would need it
-  defaultBlast = import ../blast-nix/release-2_2_29.nix;
+  defaultBlast = import ../ncbi-blast-nix/release-2_2_29.nix;
 in
 
 { stdenv, fetchurl, lib, bundlerEnv, ruby, makeWrapper, coreutils
