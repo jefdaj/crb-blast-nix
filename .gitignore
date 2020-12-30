@@ -1,2 +1,15 @@
-result
+*.lock
+*.nhr
+*.nin
+*.nsq
+*.phr
+*.pin
+*.psq
+*.blast
+coverage
+*~
+*.gem
+*fa
+*tsv
 *.sw*
+result
