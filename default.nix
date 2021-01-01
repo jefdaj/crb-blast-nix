@@ -4,14 +4,8 @@
 
 # TODO why doesn't it pick up cat from coreutils? (has to be added to main nix-shell)
 
-let
-  # TODO clean this up: upload the blast-nix package and load it with niv
-  # TODO and include the v2.2.29 code here instead? this is the only repo that would need it
-  defaultBlast = import ../ncbi-blast-nix/release-2_2_29.nix;
-in
-
 { stdenv, fetchurl, lib, bundlerEnv, ruby, makeWrapper, coreutils
-, ncbi-blast ? defaultBlast
+, blast_2_2_29
 }:
 
 # with import ../.;
@@ -36,12 +30,12 @@ let
 in stdenv.mkDerivation {
   inherit env version;
   name         = "crb-blast-${version}";
-  buildInputs  = [ makeWrapper ncbi-blast coreutils ];
+  buildInputs  = [ makeWrapper blast_2_2_29 coreutils ];
   phases       = [ "installPhase" ];
   installPhase = ''
     mkdir -p $out/bin
     makeWrapper ${env}/bin/crb-blast $out/bin/crb-blast \
-      --prefix PATH : "${ncbi-blast}/bin" \
+      --prefix PATH : "${blast_2_2_29}/bin" \
       --prefix PATH : "${coreutils}/bin"
   '';
 }
