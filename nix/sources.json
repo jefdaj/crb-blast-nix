@@ -5,10 +5,10 @@
         "homepage": null,
         "owner": "jefdaj",
         "repo": "ncbi-blast-nix",
-        "rev": "7f1a8abd8b59cbf4e04180f6b8c25d3b104fb818",
-        "sha256": "1yqz07affcncmrzpbwy4p3nirx3akpffck7x3dzvrpyxb8zib0b0",
+        "rev": "f5903466109a3a8e6cf2f3dd071b2ace8efdca46",
+        "sha256": "12m6zdxm1rxr8qbi0kg82n2m5l9vg8yk36kc8bvg82n6k7hjj9f8",
         "type": "tarball",
-        "url": "https://github.com/jefdaj/ncbi-blast-nix/archive/7f1a8abd8b59cbf4e04180f6b8c25d3b104fb818.tar.gz",
+        "url": "https://github.com/jefdaj/ncbi-blast-nix/archive/f5903466109a3a8e6cf2f3dd071b2ace8efdca46.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "niv": {
